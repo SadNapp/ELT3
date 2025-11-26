@@ -1,0 +1,7 @@
+﻿services:
+  elt3:
+    image: elt3
+    build:
+      context: .
+      dockerfile: ELT3/Dockerfile
+
