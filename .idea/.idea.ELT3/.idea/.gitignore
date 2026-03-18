@@ -1,15 +1,17 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Rider ignored files
-/modules.xml
-/contentModel.xml
-/.idea.ELT3.iml
-/projectSettingsUpdater.xml
-# Ignored default folder with query files
-/queries/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-# Editor-based HTTP Client requests
-/httpRequests/
+# sicrets 
+.env
+*.user
+*.userosscache
+*.sln.docuser
+
+# Temporary files .NET
+[Bb]in/
+[Oo]bj/
+/publish/
+
+# logs 
+/ELT3/logs/
+*.log
+
+# Docker Temporary data
+.dockerignore
