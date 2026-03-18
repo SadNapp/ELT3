@@ -1,0 +1,6 @@
+wwwroot\js\dashboard.js
+wwwroot\css\site.css
+wwwroot\index.html
+C:\Users\danil\source\repos\SadNapp\ELT3\ELT3\wwwroot\js\dashboard.js
+C:\Users\danil\source\repos\SadNapp\ELT3\ELT3\wwwroot\css\site.css
+C:\Users\danil\source\repos\SadNapp\ELT3\ELT3\wwwroot\index.html

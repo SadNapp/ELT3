@@ -1,7 +1,26 @@
 ﻿services:
-  elt3:
-    image: elt3
+  db:
+    image: postgres:16-alpine
+    container_name: stock_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "${DB_PORT}:5432"
+
+  api:
     build:
       context: .
       dockerfile: ELT3/Dockerfile
-
+    container_name: stock_api
+    depends_on:
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      # Connection name key PgsqlConnection 
+      - ConnectionStrings__PgsqlConnection=Host=db;Port=5432;Database=${DB_NAME};Username=${DB_USER};Password=${DB_PASSWORD}
+    ports:
+      - "${API_PORT}:8080"
